@@ -1,4 +1,4 @@
-# Untitled
+
 
 **Vishnu V**
 
@@ -16,11 +16,11 @@
 
 Spring Boot Microservices Developer
 
-Wipro Digital*, Bangalore – (Oct 2019 - Present)*
+Wipro Digital, Bangalore – (Oct 2019 - Present)
 
 **Spring Boot Microservices Developer**
 
-Wipro Digital*, Bangalore – (Oct 2019 - Present)*
+Wipro Digital, Bangalore – (Oct 2019 - Present)
 
 ### Projects
 
@@ -33,7 +33,7 @@ Served integral role in 6 member team. Worked on design, build, and maintenance 
 
 **Spring Boot Microservices Developer**
 
-Infosys Ltd.*, Bangalore – (2018 - 2019)*
+Infosys Ltd., Bangalore – (2018 - 2019)
 
 **Projects**
 
@@ -46,7 +46,7 @@ Worked on modernization of legacy customer service frontline monolithic applicat
 
 **Spring Boot Microservices Developer**
 
-Tata Consultancy Limited.*, Bangalore – (2015 - 2018)*
+Tata Consultancy Limited., Bangalore – (2015 - 2018)
 
 **Projects**
 
