@@ -1,0 +1,648 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Untitled</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="5919fe66-7ecc-46f2-8d5f-8eff5cebff8c" class="page sans"><header><h1 class="page-title"></h1></header><div class="page-body"><p id="e260d467-ac4f-42a0-8be4-9b8af1ee0517" class=""><strong>Vishnu V</strong></p><blockquote id="e196faea-1e98-4b24-a382-bee9251a5467" class="">I&#x27;m a software engineer based in Bangalore with 5+ years of experience in the software industry.</blockquote><p id="e78a4684-e73f-4bf3-a43d-954a64c55f86" class="">☎️ Contact information</p><p id="a6bb42ee-b1ab-47fb-8937-fe9b3369155b" class="">📧 vishnumrk@gmail.com</p><p id="c3b8f964-d92d-4d8c-813b-a0ee8c3da534" class="">🔗 <a href="http://www.linkedin.com/in/vishnuv5">www.linkedin.com/in/vishnuv5</a></p><hr id="dfa20fc8-a2e0-494a-9534-04c083243c1f"/><p id="b84eab23-8cad-4bf5-b39b-5ce9bf7b864e" class=""><strong>Work experience</strong></p><p id="9fc92280-3919-4508-82f2-00556e0dcc61" class="">Spring Boot Microservices Developer</p><p id="350982f2-64e9-44e4-bb5f-e0f4309888e6" class="block-color-gray">Wipro Digital<em>, Bangalore – (Oct 2019 - Present)</em></p><p id="d009eb88-c5be-4274-be15-707c95031038" class="">
+</p><p id="4057f781-8c4d-4388-a966-309025504271" class=""><strong>Spring Boot Microservices Developer</strong></p><p id="077e06bd-3493-4b84-8fc2-0b7782972b64" class="block-color-gray">Wipro Digital<em>, Bangalore – (Oct 2019 - Present)</em></p><h3 id="6b0c2f07-497b-482a-8b2e-62dc58403076" class="">Projects</h3><ul id="db0de24f-fb2f-4470-9c26-d501447828af" class="bulleted-list"><li>USBank, USA
+Role : Senior Microservices Developer
+Duration : 10 Months
+Tech Stack : Java, Spring Boot, Spring Webflux, Docker, Kubernetes, Istio, Wiremock.
+
+Served integral role in 6 member team. Worked on design, build, and maintenance of balance control and money movement functions inside USBank. Taken part in the development of the core framework used across the projects in the organization. Given sessions to the Junior members team on various topics. </li></ul><p id="90d06626-c226-418f-a64b-9f8fc8da7928" class=""><strong>Spring Boot Microservices Developer</strong></p><p id="042f5608-047d-4b27-a8b7-5970f33b2bbf" class="block-color-gray">Infosys Ltd.<em>, Bangalore – (2018 - 2019)</em></p><p id="ed85c297-97fa-4828-861d-f6a297696012" class=""><strong>Projects</strong></p><ul id="77e44daf-a163-4cb1-9558-ac6787c2f77a" class="bulleted-list"><li>TNT-FedEx, Netherlands
+Role : API Microservices Developer
+Duration : 1 Year
+Tech Stack : Java, Spring Boot, Spring Cloud, Eureka, Zuul, Hystrix, Ribbon, Junit, Mockito, Cucumber.
+
+Worked on modernization of legacy customer service frontline monolithic application which is in operation over 40 countries with the help of modern microservices architecture in a fast paced agile environment.</li></ul><p id="c33b7e9c-2643-4208-9d87-2e52cee07f4f" class=""><strong>Spring Boot Microservices Developer</strong></p><p id="059c6f4e-db57-4995-ab7f-b03a7faed038" class="block-color-gray">Tata Consultancy Limited.<em>, Bangalore – (2015 - 2018)</em></p><p id="b201c838-d1e7-4047-9a4b-fb24f13192e9" class=""><strong>Projects</strong></p><ul id="06eb1392-02b2-40ba-bd5f-51b099dd01c1" class="bulleted-list"><li>Ultimatix Prime, India
+Role : Java Developer
+Duration : 1Year
+Tech Stack : Spring MVC, REST APIs, Angular JS, Jenkins, SVN, SonarQube, JUnit
+
+Worked on large enterprise level platform consists of 30+ applications. Worked as part of large geographically separated team in an agile environment with tight time lines.</li></ul><ul id="e097a7d1-7a46-4206-8a70-d645500fea03" class="bulleted-list"><li>Tata Sky, India
+Role : Java Developer
+Duration : 2.5 Years
+Tech Stack : Java, Spring MVC, Hibernate, JSP, HTML, CSS, Bootstrap, jQuery, JavaScript
+
+Served integral role in 5 member team. Worked on media domain and extensively taken part in design, build, and maintenance of Tata Sky self-care application and multiple intranet applications</li></ul><hr id="21ef43a8-acff-4471-a4c6-2f7ab4a0c9ce"/><p id="6e145983-d161-4e79-943f-3c18eaae8a06" class=""><strong>🛠 Skills</strong></p><p id="c878adba-d77e-4d90-beab-d3cd15909dee" class="">💻 Technology</p><ol id="c5988585-f961-4698-8215-f9edcb6a7210" class="numbered-list" start="1"><li><strong>Java Skills</strong> : Core Java, Netflix OSS, Spring Webflux, Spring Boot, Spring Cloud, REST APIs, Junit, Mockito, Wiremock, Spring Reactor.</li></ol><ol id="6b75da81-705f-4815-8a21-0358e800cfaf" class="numbered-list" start="2"><li><strong>Web Technologies</strong> : HTML5, JavaScript, J-query, Ajax, CSS3, Bootstrap, JSON</li></ol><ol id="4d59e509-9431-4626-b9cf-70fbde2c317d" class="numbered-list" start="3"><li><strong>Operating Systems</strong> : Windows, Linux, Solaris, AIX</li></ol><ol id="4bbd514e-0acd-4c1f-8fcb-f66d208ab5a9" class="numbered-list" start="4"><li><strong>Data Bases</strong> : Oracle DB 11g, PostgreSQL, MySQL</li></ol><ol id="2daf1545-4154-48b2-9a98-a6590e037e5b" class="numbered-list" start="5"><li><strong>Tools </strong>:  Toad, SQL Developer, IntelliJ, Eclipse, SOAP UI, Postman, Swagger</li></ol><ol id="f4c7008d-bd9f-4d22-a1cc-0c9f28fe36d0" class="numbered-list" start="6"><li><strong>Version Control</strong> : SVN, Git</li></ol><ol id="4fba6094-42e6-4d86-ae0d-f8dc55846f89" class="numbered-list" start="7"><li><strong>Build Tools</strong> : Maven, Gradle</li></ol><ol id="65a418e5-9899-4afb-8a1c-4d89fcc8d5a5" class="numbered-list" start="8"><li><strong>Others </strong>: Shell Scripting, Jenkins, Docker, Kubernetes, SonarQube</li></ol><hr id="2a548928-f895-466f-a56c-1d4d7be20455"/><p id="54ff1435-4076-4fee-aa22-fc1c3ad29b78" class="">🗣 Languages</p><p id="5c55a53e-2087-423e-b665-1a6a6ac3b143" class="">English</p><p id="ffbf27fa-300f-45e1-b587-2edcd52c7102" class="">Tamil</p><p id="f3ad2209-01dd-4165-a9fc-a25da2b63796" class="">Malayalam</p><hr id="29273acf-f4e2-48e8-8dc4-281b0bfc54a1"/><p id="1e54eedb-07ce-4320-88a5-9f4e03dd5eb9" class=""><strong>📚 Education</strong></p><p id="8c776a0f-eacc-44f5-a030-2fe549266b32" class=""><strong>Master Of Computer Application</strong></p><p id="c90c3b09-99ce-4d99-b3c0-f7243965127d" class="block-color-gray">2015 - <em>2018 </em></p><p id="32f67655-a2cc-4bee-acd6-fc9a24fa6fe6" class="">Bharathiar University</p><p id="e69e3fe7-69fb-4f25-9cd7-d6a19030070b" class=""><strong>Bsc Computer Science</strong></p><p id="c128c804-bd4c-4de4-bd5c-aa69e80f0a8f" class="block-color-gray">2012 - <em>2015 </em></p><p id="b1aceb35-4fc8-4ce0-a2ba-c536f7132872" class="">University of Calicut</p></div></article></body></html>
