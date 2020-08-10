@@ -4,7 +4,7 @@
 
 > I'm a software engineer based in Bangalore with 5+ years of experience in the software industry.
 
-☎️ Contact information
+☎️ +91 9847243460
 
 📧 vishnumrk@gmail.com
 
