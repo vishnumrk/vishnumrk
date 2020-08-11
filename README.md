@@ -14,9 +14,9 @@
 
 **Work experience**
 
-Spring Boot Microservices Developer
 
-Wipro Digital, Bangalore – (Oct 2019 - Present)
+
+
 
 **Spring Boot Microservices Developer**
 
